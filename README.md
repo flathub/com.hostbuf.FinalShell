@@ -2,16 +2,9 @@
 
 一个免费且好用的ssh工具
 
-使用官方的最新文件进行构建
+[使用官方的渠道定时进行拉取](https://github.com/jcleng/finalshell_linux_archive)
 
-![](https://github.com/jcleng/finalshell-linux-flatpak/workflows/RUN%20BUILD/badge.svg)
-
-4.0 tag/flatpakfile_202306210807
-
-3.9.82 tag/flatpakfile_202305210348
-
-
-![1684639238338.png](https://img1.imgtp.com/2023/05/21/eej6Vuue.png)
+![4.2.4.4.png](https://raw.githubusercontent.com/flathub/com.hostbuf.FinalShell/master/screenshots/4.2.4.4.png)
 
 - 关于高分屏
 
