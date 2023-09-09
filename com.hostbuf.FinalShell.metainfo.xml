@@ -47,10 +47,15 @@
   <url type="bugtracker">https://github.com/flathub/com.hostbuf.FinalShell/issues</url>
   <screenshots>
     <screenshot type="default">
-      https://raw.githubusercontent.com/jcleng/finalshell-linux-flatpak/master/screenshots/1.png
+      https://raw.githubusercontent.com/flathub/com.hostbuf.FinalShell/dev/screenshots/4.2.4.4.png
     </screenshot>
   </screenshots>
   <releases>
+    <release version="4.2.4.4" date="2023-09-09">
+      <description>
+        <p>Update version to 4.2.4.4</p>
+      </description>
+    </release>
     <release version="4.2.4.2" date="2023-09-06">
       <description>
         <p>first release.</p>
