@@ -31,7 +31,7 @@
       GDK_SCALE=2 GDK_DPI_SCALE=0.5
     </p>
   </description>
-  <description lang="zh">
+  <description xml:lang="zh">
     <p>
       FinalShell是一体化的的服务器,网络管理软件,不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求.
     </p>
