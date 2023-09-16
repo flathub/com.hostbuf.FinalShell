@@ -1,17 +1,15 @@
 {
     "app-id": "com.hostbuf.FinalShell",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "23.08",
+    "sdk": "org.freedesktop.Sdk",
     "command": "FinalShell",
     "finish-args": [
         "--share=network",
         "--share=ipc",
         "--device=dri",
         "--socket=fallback-x11",
-        "--filesystem=home",
-        "--talk-name=org.gtk.vfs.*",
-        "--filesystem=xdg-run/gvfsd"
+        "--filesystem=home"
     ],
     "modules": [
         {
