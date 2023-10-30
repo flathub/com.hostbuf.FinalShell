@@ -8,6 +8,7 @@
         "--share=network",
         "--share=ipc",
         "--device=dri",
+        "--socket=wayland",
         "--socket=fallback-x11",
         "--filesystem=home"
     ],
@@ -122,8 +123,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/jcleng/finalshell_linux_archive/releases/download/_202309151634/finalshell_linux.tar.gz",
-                    "sha256": "9833ebd892a3aa04594b9b23bceb1d69c1d24b5e680662ba781f9bfdadc44fc8"
+                    "url": "https://github.com/jcleng/finalshell_linux_archive/releases/download/_202310300841/finalshell_linux.tar.gz",
+                    "sha256": "9c25350064617907cf1c14d17ce933cdc9ec434990311c17c8e2f6d4323b4149"
                 }
             ]
         }
