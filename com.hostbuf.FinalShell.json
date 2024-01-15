@@ -123,8 +123,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/jcleng/finalshell_linux_archive/releases/download/_202312021440/finalshell_linux.tar.gz",
-                    "sha256": "6e01a9c2a19ce855c91a4eb3c27bbbf5d82adb7b40e977fe41005f2da89a250a"
+                    "url": "https://github.com/jcleng/finalshell_linux_archive/releases/download/_202401151207/finalshell_linux.tar.gz",
+                    "sha256": "6104cd8fe073ac6f51e73fede038470d7347459f75d9bf70adcc25eaa9594834"
                 }
             ]
         }
