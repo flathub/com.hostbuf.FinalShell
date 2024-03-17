@@ -133,7 +133,7 @@
                 },
                 {
                     "type": "file",
-                    "filename": "finalshell_linux.deb",
+                    "dest-filename": "finalshell_linux.deb",
                     "only-arches": ["aarch64"],
                     "url": "http://www.hostbuf.com/downloads/finalshell_linux_arm64.deb",
                     "sha256": "1ec193b451a3af4c1269d634a012b423ea7a0989acdd7ab0a39db8cf0001fc8f"
