@@ -14,9 +14,15 @@
       tool,
       fully meeting the needs of development and operation and maintenance.
     </p>
+    <p xml:lang="zh-Hans">
+      FinalShell是一体化的的服务器,网络管理软件,不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求.
+    </p>
     <p>
       tips: Due to flatpak sandbox limitations, please do not check for upgrades within the
       application.
+    </p>
+    <p xml:lang="zh-Hans">
+      注意: 由于flatpak 沙盒限制, 请不要在应用内检查升级.
     </p>
     <p>
       Features.
@@ -24,29 +30,21 @@
       ssh acceleration, localized command input box, support for auto-completion,
       command history, custom command parameters.
     </p>
+    <p xml:lang="zh-Hans">
+      特色功能:
+      云端同步,免费海外服务器远程桌面加速,ssh加速,本地化命令输入框,支持自动补全,命令历史,自定义命令参数
+    </p>
     <p>
       NOTE: This wrapper is not verified by, affiliated with, or supported by www.hostbuf.com.
+    </p>
+    <p xml:lang="zh-Hans">
+      提示: 本构建未经www.hostbuf.com验证, 或得到www.hostbuf.com的支持。这个一个个人构建版本。
     </p>
     <p>
       About High Definition Screen: https://wiki.archlinux.org/title/HiDPI
       GDK_SCALE=2 GDK_DPI_SCALE=0.5
     </p>
-  </description>
-  <description xml:lang="zh-Hans">
-    <p>
-      FinalShell是一体化的的服务器,网络管理软件,不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求.
-    </p>
-    <p>
-      注意: 由于flatpak 沙盒限制, 请不要在应用内检查升级.
-    </p>
-    <p>
-      特色功能:
-      云端同步,免费海外服务器远程桌面加速,ssh加速,本地化命令输入框,支持自动补全,命令历史,自定义命令参数
-    </p>
-    <p>
-      提示: 本构建未经www.hostbuf.com验证, 或得到www.hostbuf.com的支持。这个一个个人构建版本。
-    </p>
-    <p>
+    <p xml:lang="zh-Hans">
       关于高分屏 https://wiki.archlinux.org/title/HiDPI
       用flatseal配置环境变量即可;2k,192的字体dpi可以设置: GDK_SCALE=2 GDK_DPI_SCALE=0.5
     </p>
@@ -59,6 +57,7 @@
       <caption>The home page</caption>
     </screenshot>
   </screenshots>
+  <launchable type="desktop-id">com.hostbuf.FinalShell.desktop</launchable>
   <releases>
     <release version="4.3.10" date="2024-01-15">
       <description>
@@ -86,5 +85,4 @@
       </description>
     </release>
   </releases>
-  <updatecontact>j.c.leng@foxmail.com</updatecontact>
 </component>
