@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application>
+<component type="desktop">
   <id type="desktop">com.hostbuf.FinalShell</id>
   <name>FinalShell</name>
   <summary>FinalShell ssh tools</summary>
@@ -86,4 +86,4 @@
     </release>
   </releases>
   <updatecontact>j.c.leng@foxmail.com</updatecontact>
-</application>
+</component>
