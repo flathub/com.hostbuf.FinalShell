@@ -4,3 +4,4 @@ repo/
 com.hostbuf.FinalShell.flatpak
 build-dir/
 finalshell_linux_x64.deb
+finalshell_linux_arm64.deb
