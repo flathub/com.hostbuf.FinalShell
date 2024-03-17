@@ -55,7 +55,8 @@
   <url type="bugtracker">https://github.com/flathub/com.hostbuf.FinalShell/issues</url>
   <screenshots>
     <screenshot type="default">
-      https://raw.githubusercontent.com/flathub/com.hostbuf.FinalShell/dev/screenshots/4.2.4.4.png
+      <image>https://raw.githubusercontent.com/flathub/com.hostbuf.FinalShell/dev/screenshots/4.2.4.4.png</image>
+      <caption>The home page</caption>
     </screenshot>
   </screenshots>
   <releases>
