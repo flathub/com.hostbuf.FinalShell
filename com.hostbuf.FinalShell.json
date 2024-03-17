@@ -104,9 +104,12 @@
                 "install -Dm644 com.hostbuf.FinalShell.desktop /app/share/applications/com.hostbuf.FinalShell.desktop",
                 "install -Dm644 com.hostbuf.FinalShell.png /app/share/icons/hicolor/scalable/apps/com.hostbuf.FinalShell.png",
                 "install -Dm644 com.hostbuf.FinalShell.png /app/share/icons/hicolor/512x512/apps/com.hostbuf.FinalShell.png",
-                "mv FinalShell /app/fl",
-                "chmod +x /app/fl/bin/FinalShell",
-                "ln -s /app/fl/bin/FinalShell /app/bin/FinalShell"
+                "ar -p finalshell_linux_x64.deb data.tar.xz > data.tar.xz",
+                "mkdir -p /app/dir",
+                "tar xvf data.tar.xz -C /app/dir",
+                "ls /app/dir",
+                "chmod +x /app/dir/usr/lib/finalshell/bin/FinalShell",
+                "ln -s /app/dir/usr/lib/finalshell/bin/FinalShell /app/bin/FinalShell"
             ],
             "sources": [
                 {
@@ -122,9 +125,9 @@
                     "path": "com.hostbuf.FinalShell.png"
                 },
                 {
-                    "type": "archive",
-                    "url": "https://github.com/jcleng/finalshell_linux_archive/releases/download/_202403141633/finalshell_linux.tar.gz",
-                    "sha256": "be742763f1ae05df263e9778507add78027006e720ff402ff051fdc4f5f96976"
+                    "type": "file",
+                    "url": "http://dl.hostbuf.com/finalshell3/finalshell_linux_x64.deb",
+                    "sha256": "7f1b3eb6de2b4e25cfec87ebdb03c0b0c3c1034b732cd1218baa6bfc3153d649"
                 }
             ]
         }
