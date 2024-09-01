@@ -8,7 +8,6 @@
         "--share=network",
         "--share=ipc",
         "--device=dri",
-        "--socket=wayland",
         "--socket=fallback-x11",
         "--filesystem=home"
     ],
