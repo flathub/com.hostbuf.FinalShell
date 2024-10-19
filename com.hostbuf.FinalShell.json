@@ -102,8 +102,7 @@
             "build-commands": [
                 "install -Dm644 com.hostbuf.FinalShell.metainfo.xml -t $FLATPAK_DEST/share/metainfo",
                 "install -Dm644 com.hostbuf.FinalShell.desktop /app/share/applications/com.hostbuf.FinalShell.desktop",
-                "install -Dm644 com.hostbuf.FinalShell.png /app/share/icons/hicolor/scalable/apps/com.hostbuf.FinalShell.png",
-                "install -Dm644 com.hostbuf.FinalShell.png /app/share/icons/hicolor/512x512/apps/com.hostbuf.FinalShell.png",
+                "install -Dm644 com.hostbuf.FinalShell.svg /app/share/icons/hicolor/scalable/apps/com.hostbuf.FinalShell.svg",
                 "ar -p finalshell_linux.deb data.tar.xz > data.tar.xz",
                 "mkdir -p /app/dir",
                 "tar xvf data.tar.xz -C /app/dir",
@@ -121,7 +120,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "com.hostbuf.FinalShell.png"
+                    "path": "com.hostbuf.FinalShell.svg"
                 },
                 {
                     "type": "file",
