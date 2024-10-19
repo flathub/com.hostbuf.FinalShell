@@ -106,7 +106,6 @@
                 "ar -p finalshell_linux.deb data.tar.xz > data.tar.xz",
                 "mkdir -p /app/dir",
                 "tar xvf data.tar.xz -C /app/dir",
-                "ls /app/dir",
                 "chmod +x /app/dir/usr/lib/finalshell/bin/FinalShell",
                 "ln -s /app/dir/usr/lib/finalshell/bin/FinalShell /app/bin/FinalShell"
             ],
@@ -127,15 +126,15 @@
                     "type": "file",
                     "dest-filename": "finalshell_linux.deb",
                     "only-arches": ["x86_64"],
-                    "url": "http://dl.hostbuf.com/finalshell3/finalshell_linux_x64.deb",
-                    "sha256": "7f1b3eb6de2b4e25cfec87ebdb03c0b0c3c1034b732cd1218baa6bfc3153d649"
+                    "url": "https://dl.hostbuf.com/finalshell3/finalshell_linux_x64.deb",
+                    "sha256": "53cecb2def6ce289b3476a518fe8e3287e5145a678838516a0996393b378c2d6"
                 },
                 {
                     "type": "file",
                     "dest-filename": "finalshell_linux.deb",
                     "only-arches": ["aarch64"],
-                    "url": "http://www.hostbuf.com/downloads/finalshell_linux_arm64.deb",
-                    "sha256": "1ec193b451a3af4c1269d634a012b423ea7a0989acdd7ab0a39db8cf0001fc8f"
+                    "url": "https://dl.hostbuf.com/finalshell3/finalshell_linux_arm64.deb",
+                    "sha256": "250a0b84211e2bce54c38efc85a3fa02ed21eea6af6b1748ab6a32d04622f2a0"
                 }
             ]
         }
