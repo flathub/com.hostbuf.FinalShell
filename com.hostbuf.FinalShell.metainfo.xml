@@ -59,6 +59,11 @@
   </screenshots>
   <launchable type="desktop-id">com.hostbuf.FinalShell.desktop</launchable>
   <releases>
+    <release version="4.5.12" date="2024-11-01">
+      <description>
+        <p>Update version to 4.5.12</p>
+      </description>
+    </release>
     <release version="4.5.10" date="2024-10-19">
       <description>
         <p>Update version to 4.5.10.</p>
