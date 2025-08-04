@@ -3,6 +3,7 @@
   <id type="desktop">com.hostbuf.FinalShell</id>
   <name>FinalShell</name>
   <summary>FinalShell ssh tools</summary>
+  <content_rating type="oars-1.1"/>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary=https://www.hostbuf.com/t/988.html</project_license>
   <developer_name>FinalShell developers</developer_name>
@@ -99,3 +100,4 @@
       </description>
     </release>
   </releases>
+</component>
