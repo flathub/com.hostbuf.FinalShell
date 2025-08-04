@@ -1,75 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2025 FinalShell builders -->
-<component type="desktop-application">
-  <id>com.hostbuf.FinalShell</id>
+<component type="desktop">
+  <id type="desktop">com.hostbuf.FinalShell</id>
   <name>FinalShell</name>
   <summary>FinalShell ssh tools</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary=https://www.hostbuf.com/t/988.html</project_license>
-  <developer id="com.hostbuf">
-    <name>FinalShell developers</name>
-  </developer>
+  <developer_name>FinalShell developers</developer_name>
   <description>
-    <p>FinalShell is an all‑in‑one server and network management software, not only a ssh client, but also a powerful development and operations tool, fully meeting the needs of dev‑ops teams.</p>
-    <p xml:lang="zh‑Hans">FinalShell是一体化的服务器／网络管理软件，不仅是 ssh 客户端，也是功能强大的开发、运维工具，充分满足 DevOps 需求。</p>
-    <p>tips: Due to flatpak sandbox limitations, this build is not supported by and not affiliated with hostbuf.com. Please do not check for upgrades within the application.</p>
-    <p xml:lang="zh‑Hans">提示：本构建未经 hostbuf.com 验证或支持，属于个人构建版本；请勿在应用内部检查升级。</p>
-    <p>Features: Cloud synchronization, free remote desktop acceleration for overseas servers, ssh tunneling acceleration, localized command‑line box with auto‑completion, command history, custom command parameters.</p>
-    <p xml:lang="zh‑Hans">特色功能：云端同步、海外服务器远程桌面加速、SSH 加速、本地化命令行输入框、支持自动补全／命令历史／自定义参数。</p>
-    <p>About HiDPI: see Arch Wiki HiDPI; you may set <code>GDK_SCALE=2 GDK_DPI_SCALE=0.5</code>.</p>
-    <p xml:lang="zh‑Hans">关于高分屏: 参见 Arch Wiki HiDPI，可在 Flatseal 界面设置环境变量 <code>GDK_SCALE=2 GDK_DPI_SCALE=0.5</code>。</p>
+    <p>
+      FinalShell is an all-in-one server and network management software,
+      not only as a ssh client, but also as a powerful development and operation and maintenance
+      tool,
+      fully meeting the needs of development and operation and maintenance.
+    </p>
+    <p xml:lang="zh-Hans">
+      FinalShell是一体化的的服务器,网络管理软件,不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求.
+    </p>
+    <p>
+      tips: Due to flatpak sandbox limitations, please do not check for upgrades within the
+      application.
+    </p>
+    <p xml:lang="zh-Hans">
+      注意: 由于flatpak 沙盒限制, 请不要在应用内检查升级.
+    </p>
+    <p>
+      Features.
+      Cloud synchronization, free remote desktop acceleration for overseas servers,
+      ssh acceleration, localized command input box, support for auto-completion,
+      command history, custom command parameters.
+    </p>
+    <p xml:lang="zh-Hans">
+      特色功能:
+      云端同步,免费海外服务器远程桌面加速,ssh加速,本地化命令输入框,支持自动补全,命令历史,自定义命令参数
+    </p>
+    <p>
+      NOTE: This wrapper is not verified by, affiliated with, or supported by www.hostbuf.com.
+    </p>
+    <p xml:lang="zh-Hans">
+      提示: 本构建未经www.hostbuf.com验证, 或得到www.hostbuf.com的支持。这个一个个人构建版本。
+    </p>
+    <p>
+      About High Definition Screen: https://wiki.archlinux.org/title/HiDPI
+      GDK_SCALE=2 GDK_DPI_SCALE=0.5
+    </p>
+    <p xml:lang="zh-Hans">
+      关于高分屏 https://wiki.archlinux.org/title/HiDPI
+      用flatseal配置环境变量即可;2k,192的字体dpi可以设置: GDK_SCALE=2 GDK_DPI_SCALE=0.5
+    </p>
   </description>
-  <launchable type="desktop-id">com.hostbuf.FinalShell.desktop</launchable>
-  <content_rating type="oars‑1.1"/>
   <url type="homepage">https://www.hostbuf.com/t/988.html</url>
   <url type="bugtracker">https://github.com/flathub/com.hostbuf.FinalShell/issues</url>
-  <url type="vcs-browser">https://github.com/flathub/com.hostbuf.FinalShell</url>
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/flathub/com.hostbuf.FinalShell/dev/screenshots/4.2.4.4.png</image>
       <caption>The home page</caption>
     </screenshot>
   </screenshots>
+  <launchable type="desktop-id">com.hostbuf.FinalShell.desktop</launchable>
   <releases>
-    <release version="4.6.3" date="2025‑05‑21">
+    <release version="4.6.3" date="2025-05-21">
       <description>
         <p>Update version to 4.6.3</p>
       </description>
     </release>
-    <release version="4.5.12" date="2024‑11‑01">
+    <release version="4.5.12" date="2024-11-01">
       <description>
         <p>Update version to 4.5.12</p>
       </description>
     </release>
-    <release version="4.5.10" date="2024‑10‑19">
+    <release version="4.5.10" date="2024-10-19">
       <description>
-        <p>Update version to 4.5.10</p>
+        <p>Update version to 4.5.10.</p>
       </description>
     </release>
-    <release version="4.3.10" date="2024‑03‑17">
+    <release version="4.3.10" date="2024-03-17">
       <description>
-        <p>Update version to 4.3.10, and support aarch64</p>
+        <p>Update version to 4.3.10, And support aarch64</p>
       </description>
     </release>
-    <release version="4.3.0.6" date="2023‑12‑02">
+    <release version="4.3.0.6" date="2023-12-02">
       <description>
         <p>Update version to 4.3.0.6</p>
       </description>
     </release>
-    <release version="4.2.4.5" date="2023‑09‑16">
+    <release version="4.2.4.5" date="2023-09-16">
       <description>
         <p>Update version to 4.2.4.5</p>
       </description>
     </release>
-    <release version="4.2.4.4" date="2023‑09‑09">
+    <release version="4.2.4.4" date="2023-09-09">
       <description>
         <p>Update version to 4.2.4.4</p>
       </description>
     </release>
-    <release version="4.2.4.2" date="2023‑09‑06">
+    <release version="4.2.4.2" date="2023-09-06">
       <description>
-        <p>Initial release</p>
+        <p>first release.</p>
       </description>
     </release>
   </releases>
-</component>
