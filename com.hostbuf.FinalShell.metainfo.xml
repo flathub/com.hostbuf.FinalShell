@@ -6,6 +6,25 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary=https://www.hostbuf.com/t/988.html</project_license>
   <developer_name>FinalShell developers</developer_name>
+
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="drugs-narcotics">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-language">none</content_attribute>
+    <content_attribute id="sex-homosexuality">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-humor">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+    <content_attribute id="social-chat">mild</content_attribute>
+    <content_attribute id="social-info">mild</content_attribute>
+  </content_rating>
+
   <description>
     <p>
       FinalShell is an all-in-one server and network management software,
@@ -24,7 +43,7 @@
       注意: 由于flatpak 沙盒限制, 请不要在应用内检查升级.
     </p>
     <p>
-      Features.
+      Features:
       Cloud synchronization, free remote desktop acceleration for overseas servers,
       ssh acceleration, localized command input box, support for auto-completion,
       command history, custom command parameters.
@@ -48,15 +67,19 @@
       用flatseal配置环境变量即可;2k,192的字体dpi可以设置: GDK_SCALE=2 GDK_DPI_SCALE=0.5
     </p>
   </description>
+
   <url type="homepage">https://www.hostbuf.com/t/988.html</url>
   <url type="bugtracker">https://github.com/flathub/com.hostbuf.FinalShell/issues</url>
+
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/flathub/com.hostbuf.FinalShell/dev/screenshots/4.2.4.4.png</image>
       <caption>The home page</caption>
     </screenshot>
   </screenshots>
+
   <launchable type="desktop-id">com.hostbuf.FinalShell.desktop</launchable>
+
   <releases>
     <release version="4.6.3" date="2025-05-21">
       <description>
@@ -95,7 +118,7 @@
     </release>
     <release version="4.2.4.2" date="2023-09-06">
       <description>
-        <p>first release.</p>
+        <p>First release.</p>
       </description>
     </release>
   </releases>
