@@ -1,89 +1,132 @@
-app-id: com.baidu.NetDisk
-runtime: org.freedesktop.Platform
-runtime-version: '24.08'
-sdk: org.freedesktop.Sdk
-base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
-separate-locales: false
-command: baidunetdisk
-
-add-extensions:
-  org.freedesktop.Platform.Locale:
-    directory: share/runtime/locale
-    subpaths:
-      - zh_CN
-    version: '24.08'
-    add-platform: true
-  org.freedesktop.Platform.I18n:
-    directory: share/runtime/i18n
-    subpaths:
-      - zh_CN
-    version: '24.08'
-    add-platform: true
-
-finish-args:
-  - --socket=x11
-  - --socket=pulseaudio
-  - --share=network
-  - --share=ipc
-  - --device=dri
-  - --filesystem=xdg-desktop:ro
-  - --filesystem=xdg-documents:ro
-  - --filesystem=xdg-download
-  - --filesystem=xdg-music:ro
-  - --filesystem=xdg-pictures:ro
-  - --filesystem=xdg-videos:ro
-  - --persist=.config/baidunetdisk
-  - --talk-name=org.freedesktop.Notifications
-  - --talk-name=org.kde.StatusNotifierWatcher
-  - --env=LANG=zh_CN.UTF-8
-  - --env=LC_ALL=zh_CN.UTF-8
-
-build-options:
-  strip: false
-  no-debuginfo: true
-
-tags:
-  - proprietary
-
-modules:
-  - name: baidunetdisk
-    buildsystem: simple
-    sources:
-      - type: extra-data
-        filename: baidunetdisk_amd64.deb
-        only-arches: [x86_64]
-        url: https://issuepcdn.baidupcs.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_amd64.deb
-        sha256: 50ec18f05626a13f57ef034630416d481682bc1018539f33397d5c71bc653b3d
-        size: 103967440
-      - type: extra-data
-        filename: baidunetdisk_arm64.deb
-        only-arches: [aarch64]
-        url: https://issuepcdn.baidupcs.com/issue/netdisk/LinuxGuanjia/4.17.7/baidunetdisk_4.17.7_arm64.deb
-        sha256: f8f5ed988f071c92570b163f06c001cbd7ededc1cca313756ea6cfa4814cb776
-        size: 100225528
-      - type: file
-        path: com.baidu.NetDisk.metainfo.xml
-      - type: file
-        path: com.baidu.NetDisk.desktop
-      - type: file
-        path: com.baidu.NetDisk.svg
-      - type: script
-        dest-filename: baidunetdisk
-        commands:
-          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - zypak-wrapper.sh /app/extra/baidunetdisk/baidunetdisk "$@"
-      - type: script
-        dest-filename: apply_extra
-        commands:
-          - bsdtar -xf baidunetdisk_*.deb
-          - if [ -f data.tar.xz ]; then bsdtar -xf data.tar.xz; fi
-          - if [ -f data.tar.zst ]; then bsdtar -xf data.tar.zst; fi
-          - mv opt/baidunetdisk /app/extra/
-          - rm -rf baidunetdisk_*.deb data.tar.* control.tar.* debian-binary opt usr
-    build-commands:
-      - install -Dm644 com.baidu.NetDisk.metainfo.xml -t /app/share/metainfo/
-      - install -Dm644 com.baidu.NetDisk.desktop -t /app/share/applications/
-      - install -Dm644 com.baidu.NetDisk.svg -t /app/share/icons/hicolor/scalable/apps/
-      - install -Dm755 baidunetdisk -t /app/bin/
-      - install -Dm755 apply_extra -t /app/bin/
+{
+  "app-id": "com.hostbuf.FinalShell",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "24.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "FinalShell",
+  "finish-args": [
+    "--share=network",
+    "--device=dri",
+    "--share=ipc",
+    "--socket=x11",
+    "--filesystem=home"
+  ],
+  "modules": [
+    {
+      "name": "libpcap",
+      "buildsystem": "autotools",
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://www.tcpdump.org/release/libpcap-1.9.1.tar.gz",
+          "sha256": "635237637c5b619bcceba91900666b64d56ecb7be63f298f601ec786ce087094"
+        }
+      ],
+      "cleanup": [
+        "/bin",
+        "/share/man",
+        "*.a",
+        "*.h",
+        "*.pc"
+      ]
+    },
+    {
+      "name": "noto-fonts",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p /app/share/fonts",
+        "install -D NotoSans-Bold.ttf /app/share/fonts/",
+        "install -D NotoSans-Medium.ttf /app/share/fonts/",
+        "install -D NotoSans-Regular.ttf /app/share/fonts/",
+        "install -D NotoSans-ExtraCondensed.ttf /app/share/fonts/",
+        "install -D NotoSans-ExtraCondensedBold.ttf /app/share/fonts/"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://noto-website-2.storage.googleapis.com/pkgs/NotoSans-hinted.zip",
+          "sha256": "02e5f834c526f815f3b9f90f98e2b5b09f17cec107cc751c3b58fc3a2c0b2942"
+        }
+      ]
+    },
+    {
+      "name": "noto-font-cjk-regular",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p /app/share/fonts",
+        "install -D NotoSansCJK-Regular.ttc /app/share/fonts/"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJK-Regular.ttc.zip",
+          "sha256": "32d03afb0b1109fa75a96f89dfc118015283a5343f2216ee4b3757c19992f75d"
+        }
+      ]
+    },
+    {
+      "name": "noto-font-cjk-bold",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p /app/share/fonts",
+        "install -D NotoSansCJK-Bold.ttc /app/share/fonts/"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJK-Bold.ttc.zip",
+          "sha256": "3cd895bce6765903b2eefcd90eea6ed372364e66d5b896ea3a594bd3e737eba0"
+        }
+      ]
+    },
+    {
+      "name": "noto-font-cjk-medium",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p /app/share/fonts",
+        "install -D NotoSansCJK-Medium.ttc /app/share/fonts/"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJK-Medium.ttc.zip",
+          "sha256": "d7590637168e1cff4fd3a15422e483308d7ba2a7120ccaf96ead274c3b40e1b3"
+        }
+      ]
+    },
+    {
+      "name": "install",
+      "builddir": true,
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm644 com.hostbuf.FinalShell.metainfo.xml -t $FLATPAK_DEST/share/metainfo",
+        "install -Dm644 com.hostbuf.FinalShell.desktop /app/share/applications/com.hostbuf.FinalShell.desktop",
+        "install -Dm644 com.hostbuf.FinalShell.svg /app/share/icons/hicolor/scalable/apps/com.hostbuf.FinalShell.svg",
+        "ar -p finalshell_linux.deb data.tar.xz > data.tar.xz",
+        "mkdir -p /app/dir",
+        "tar xvf data.tar.xz -C /app/dir",
+        "chmod +x /app/dir/usr/lib/finalshell/bin/FinalShell",
+        "ln -s /app/dir/usr/lib/finalshell/bin/FinalShell /app/bin/FinalShell"
+      ],
+      "sources": [
+        { "type": "file", "path": "com.hostbuf.FinalShell.desktop" },
+        { "type": "file", "path": "com.hostbuf.FinalShell.metainfo.xml" },
+        { "type": "file", "path": "com.hostbuf.FinalShell.svg" },
+        {
+          "type": "file",
+          "dest-filename": "finalshell_linux.deb",
+          "only-arches": ["x86_64"],
+          "url": "https://dl.hostbuf.com/finalshell3/finalshell_linux_x64.deb",
+          "sha256": "71d1326da3a864c6e5c64694ac669fb9b0870b175566bf8008e90fedd5aea90d"
+        },
+        {
+          "type": "file",
+          "dest-filename": "finalshell_linux.deb",
+          "only-arches": ["aarch64"],
+          "url": "https://dl.hostbuf.com/finalshell3/finalshell_linux_arm64.deb",
+          "sha256": "06779669866b05c054fb9edd90efaf6768841d12c7f0839af28b0e9957b298d5"
+        }
+      ]
+    }
+  ]
+}
