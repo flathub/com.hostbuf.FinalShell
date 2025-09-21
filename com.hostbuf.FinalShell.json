@@ -1,7 +1,7 @@
 {
   "app-id": "com.hostbuf.FinalShell",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "25.08",
+  "runtime-version": "24.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "FinalShell",
   "finish-args": [
