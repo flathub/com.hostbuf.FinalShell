@@ -100,4 +100,10 @@
       </description>
     </release>
   </releases>
+  <keywords>
+    <keyword>ssh tool</keyword>
+    <keyword>server management software</keyword>
+    <keyword>development tools</keyword>
+    <keyword>network administration</keyword>
+  </keywords>
 </component>
