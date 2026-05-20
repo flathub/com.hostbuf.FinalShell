@@ -4,6 +4,7 @@
   "runtime-version": "24.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "FinalShell",
+  "tags": ["proprietary"],
   "finish-args": [
     "--share=network",
     "--device=dri",
