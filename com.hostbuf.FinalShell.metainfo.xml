@@ -8,7 +8,6 @@
   <project_license>LicenseRef-proprietary=https://www.hostbuf.com/t/988.html</project_license>
   <developer_name>FinalShell developers</developer_name>
   <description>
-    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by www.hostbuf.com.**</p>
     <p xml:lang="zh-Hans">**提示: 本构建未经www.hostbuf.com验证, 或得到www.hostbuf.com的支持。这个一个个人构建版本。**</p>    
     <p>
       FinalShell is an all-in-one server and network management software,
